@@ -3,10 +3,12 @@ import ReactDOM from 'react-dom';
 import './index.css';
 // import App from './App';
 import * as serviceWorker from './serviceWorker';
-import Hello from './hello';
+// import Hello from './hello';
+import Greeting from './Greeting';
 
 
-ReactDOM.render( < Hello name = "Mike Mabike" / > , document.getElementById('root'));
+const isLoggedin = true;
+ReactDOM.render( < Greeting isLoggedin = {isLoggedin} / > , document.getElementById('root'));
 
 
 
