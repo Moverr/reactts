@@ -1,36 +1,55 @@
-
-import React, { Component } from 'react';
+import React, {
+  Component
+} from 'react';
 // import { isString } from 'postcss-selector-parser';
 
 import Utitlities from './Utitlities';
 
- class Hello extends Component {
-      
-  
+class Hello extends Component {
+
+
 
   //todo: YOu initialize  in the state in the constructor: :: 
-  
+
 
   constructor(props) {
     super(props)
-    this.util = new  Utitlities();
-  
-    this.state =  {   
-      
+    this.util = new Utitlities();
+
+    this.state = {
+
       name: "Muyinda Rogers",
-      date : this.util.initDate()
+      date: this.util.initDate()
     }
+
+    this.stopInterval = this.stopInterval.bind(this);
+    this.startInterval = this.startInterval.bind(this);
+    this.handleStart = this.handleStart.bind(this);
+    this.handleStop = this.handleStop.bind(this);
     
   }
+
   
-  componentDidMount(){
-    this.timeId =  setInterval(
-      ()=>this.tick(),1000
-    );
+  
+  startInterval() {
+    this.timeId = setInterval(() => this.tick(), 1000);
   }
-  componentWillUnmount(){
+  stopInterval() {
     clearInterval(this.timeId);
   }
+
+  
+  componentDidMount() {
+    // this.startInterval();
+  }
+  
+  componentWillUnmount() {
+    //  this.stopInterval();
+  }
+  
+
+
+
   /*
   componentDidCatch(){
 
@@ -50,17 +69,29 @@ import Utitlities from './Utitlities';
   }
    */
 
-  tick(){
+  handleStart(e) {    
+    this.startInterval();
+    
+  }
+
+  handleStop(e) {    
+    this.stopInterval();
+  }
+  
+
+  tick() {
     this.setState({
-      date : this.util.initDate()
+      date: this.util.initDate()
     })
   }
-    player (name){
-             
-        return <h1>Play me a sound {name}</h1>;
-       
-      // return "N/A";
-    }
+  player(name) {
+
+    return <h1 > Play me a sound {
+      name
+    } < /h1>;
+
+    // return "N/A";
+  }
 
 
   render() {
@@ -69,20 +100,29 @@ import Utitlities from './Utitlities';
     //     "age":23
     // }
 
-    return (
-      <div>
-        {this.player(this.props.name)}
-        <h2> New Date : {this.state.date.toLocaleTimeString() } </h2>
+    return ( 
+      
+      <div> {
+        this.player(this.props.name)
+      } 
+      
+      <h2> New Date: { this.state.date.toLocaleTimeString()} </h2> 
+      
+      <button onClick = {this.handleStart } > START </button> 
+      <button onClick = {this.handleStop } > STOP </button> 
+      
+
       </div>
     )
   }
 
-     
-     getH1(name) {
-         return <h1> {name} </h1>;
-     }
+
+  getH1(name) {
+    return <h1 > {
+      name
+    } < /h1>;
+  }
 }
 
 
 export default Hello;
-
