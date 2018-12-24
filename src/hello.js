@@ -28,11 +28,12 @@ class Hello extends Component {
     this.handleStart = this.handleStart.bind(this);
     this.handleStop = this.handleStop.bind(this);
     this.handleToggle = this.handleToggle.bind(this);
+    this.playmealert = this.playmealert.bind(this);
     
   }
 
-  playmealert(){
-    alert("play Me Alert");
+  playmealert(atg){
+    alert("play Me Alert : "+atg);
   }
   handleToggle(){
     this.setState({
@@ -122,7 +123,12 @@ class Hello extends Component {
       <button onClick = {this.handleStop } > STOP </button> 
       
       <button onClick = {this.handleToggle } > {this.state.isToggled ? "ON" : "OFF" } </button> 
-      <button onClick = {(e) => this.playmealert() } > PLAY ME </button> 
+
+      {/* not very recommend method */}
+      {/* <button onClick = {(e) => this.playmealert(1) } > PLAY ME </button>  */}
+      <button onClick = {(e) => this.playmealert(1) } > PLAY ME </button> 
+      
+      
       
       </div>
     )
