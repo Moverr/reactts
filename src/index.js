@@ -6,7 +6,7 @@ import * as serviceWorker from './serviceWorker';
 import Hello from './hello';
 
 function tick(){
-    ReactDOM.render(<Hello />, document.getElementById('root'));
+    ReactDOM.render(<Hello name="Mike Mabike" />, document.getElementById('root'));
 
 }
 
