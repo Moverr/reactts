@@ -2,18 +2,23 @@
 import React, { Component } from 'react';
 // import { isString } from 'postcss-selector-parser';
 
+import Utitlities from './Utitlities';
+
  class Hello extends Component {
       
   
 
   //todo: YOu initialize  in the state in the constructor: :: 
+  
 
   constructor(props) {
     super(props)
-    this.state =  {
-    
+    this.util = new  Utitlities();
+  
+    this.state =  {   
+      
       name: "Muyinda Rogers",
-      date : new Date()
+      date : this.util.initDate()
     }
     
   }
@@ -47,7 +52,7 @@ import React, { Component } from 'react';
 
   tick(){
     this.setState({
-      date : new Date()
+      date : this.util.initDate()
     })
   }
     player (name){
@@ -78,4 +83,6 @@ import React, { Component } from 'react';
      }
 }
 
+
 export default Hello;
+
