@@ -1,12 +1,9 @@
 import  { Component } from 'react'
 
  class Utitlities extends Component {
-     constructor(props) {
-       super(props)
-     
-     }
-
-     
+    
+    //todo: format the date in strings etc :: -- 
+    
      initDate() {
         return new Date();
       }

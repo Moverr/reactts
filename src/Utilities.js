@@ -9,9 +9,7 @@ const user = {
 class Utilities extends Component {
 
 
-     Utilities(){
-
-    }
+     
 
     formatName(user) {
         return "see";
