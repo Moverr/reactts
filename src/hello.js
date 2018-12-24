@@ -6,20 +6,25 @@ import React, { Component } from 'react';
       
   
 
+  //todo: YOu initialize  in the state in the constructor: :: 
+
   constructor(props) {
     super(props)
     this.state =  {
     
-      name: "Muyinda Rogers"
+      name: "Muyinda Rogers",
+      date : new Date()
     }
     
   }
   
   componentDidMount(){
-
+    this.timeId =  setInterval(
+      ()=>this.tick(),1000
+    );
   }
   componentWillUnmount(){
-
+    clearInterval(this.timeId);
   }
   /*
   componentDidCatch(){

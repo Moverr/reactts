@@ -5,12 +5,10 @@ import './index.css';
 import * as serviceWorker from './serviceWorker';
 import Hello from './hello';
 
-function tick(){
-    ReactDOM.render(<Hello name="Mike Mabike" />, document.getElementById('root'));
 
-}
+ReactDOM.render( < Hello name = "Mike Mabike" / > , document.getElementById('root'));
 
-setInterval(tick,100);
+
 
 // If you want your app to work offline and load faster, you can change
 // unregister() to register() below. Note this comes with some pitfalls.
