@@ -4,7 +4,7 @@ import React, { Component } from 'react'
  class LoginButton extends Component {
   render() {
     return (
-        <button >{this.props.name}</button>
+        <button >{this.props.buttonName}</button>
         
     )
   }
