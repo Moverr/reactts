@@ -4,11 +4,13 @@ import './index.css';
 // import App from './App';
 import * as serviceWorker from './serviceWorker';
 // import Hello from './hello';
-import Greeting from './Greeting';
+// import Greeting from './Greeting';
+import Mailbox from './Mailbox';
 
 
 const isLoggedin = true;
-ReactDOM.render( < Greeting isLoggedin = {isLoggedin} / > , document.getElementById('root'));
+const unreadMessages =   ['React', 'Re: React', 'Re:Re: React'];
+ReactDOM.render( <Mailbox unreadMessages = {unreadMessages} isLoggedin={isLoggedin}  / > , document.getElementById('root'));
 
 
 
