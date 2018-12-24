@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import LoginButton from './LoginButton';
 
 class Greeting extends Component {
  
@@ -15,6 +16,8 @@ class Greeting extends Component {
         return (
             <div>
                {this.greet(this.props.isLoggedin)}
+               <LoginButton name="Hay Mover" />
+        
             </div>
         );
     }
