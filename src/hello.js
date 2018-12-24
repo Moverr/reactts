@@ -31,6 +31,9 @@ class Hello extends Component {
     
   }
 
+  playmealert(){
+    alert("play Me Alert");
+  }
   handleToggle(){
     this.setState({
       isToggled:!this.state.isToggled
@@ -119,6 +122,7 @@ class Hello extends Component {
       <button onClick = {this.handleStop } > STOP </button> 
       
       <button onClick = {this.handleToggle } > {this.state.isToggled ? "ON" : "OFF" } </button> 
+      <button onClick = {(e) => this.playmealert() } > PLAY ME </button> 
       
       </div>
     )
