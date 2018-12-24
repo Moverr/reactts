@@ -19,16 +19,23 @@ class Hello extends Component {
     this.state = {
 
       name: "Muyinda Rogers",
-      date: this.util.initDate()
+      date: this.util.initDate(),
+      isToggled:true
     }
 
     this.stopInterval = this.stopInterval.bind(this);
     this.startInterval = this.startInterval.bind(this);
     this.handleStart = this.handleStart.bind(this);
     this.handleStop = this.handleStop.bind(this);
+    this.handleToggle = this.handleToggle.bind(this);
     
   }
 
+  handleToggle(){
+    this.setState({
+      isToggled:!this.state.isToggled
+    })
+  }
   
   
   startInterval() {
@@ -44,7 +51,7 @@ class Hello extends Component {
   }
   
   componentWillUnmount() {
-    //  this.stopInterval();
+     this.stopInterval();
   }
   
 
@@ -111,17 +118,14 @@ class Hello extends Component {
       <button onClick = {this.handleStart } > START </button> 
       <button onClick = {this.handleStop } > STOP </button> 
       
-
+      <button onClick = {this.handleToggle } > {this.state.isToggled ? "ON" : "OFF" } </button> 
+      
       </div>
     )
   }
 
 
-  getH1(name) {
-    return <h1 > {
-      name
-    } < /h1>;
-  }
+   
 }
 
 
