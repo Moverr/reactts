@@ -5,10 +5,11 @@ class Blog extends Component {
     
     render() {
 
+        const posts = this.props.posts;
         const sidebar = (
             <ul>
                     {
-                        this.props.posts.map((post)=>
+                        posts.map((post)=>
                         <li key={post.id}>
                              {post.title} 
                         </li>
@@ -20,7 +21,7 @@ class Blog extends Component {
         const content =  ( 
             <div>
                 {
-                    this.props.posts.map((post)=>
+                    posts.map((post)=>
                     <div key={post.id}>
                     <h2>{post.title}</h2>
                     <p>{post.content}</p>
