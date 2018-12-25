@@ -6,32 +6,8 @@ class Blog extends Component {
     render() {
 
         const posts = this.props.posts;
-        const sidebar = (
-            <ul>
-                    {
-                        posts.map((post)=>
-                        <li key={post.id}>
-                             {post.title} 
-                        </li>
-                    )
-                }   
-            </ul>             
-        );
-
-        const content =  ( 
-            <div>
-                {
-                    posts.map((post)=>
-                    <div key={post.id}>
-                    <h2>{post.title}</h2>
-                    <p>{post.content}</p>
-                    
-                        </div>
-                    )
-                }
-            </div>
-        );
-
+        const sidebar = this.getSideBar(posts);
+        const content =  this.getContent(posts);
 
 
         return (
@@ -40,6 +16,22 @@ class Blog extends Component {
                 {content}
             </div>
         )
+    }
+
+    getContent(posts) {
+        return (<div>            {posts.map((post) => <div key={post.id}>
+                <h2>{post.title}</h2>
+                <p>{post.content}</p>
+            </div>)}
+        </div>);
+    }
+
+    getSideBar(posts) {
+        return (<ul>
+            {posts.map((post) => <li key={post.id}>
+                {post.title}
+            </li>)}
+        </ul>);
     }
 }
 
