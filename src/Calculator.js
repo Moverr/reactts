@@ -1,4 +1,6 @@
 import React, { Component } from 'react';
+import BoilingVerdict from './boilingVerdict';
+
 
 class Calculator  extends Component {
 
@@ -15,6 +17,8 @@ class Calculator  extends Component {
              <fieldset>
                  <legend>Enter temprature in celcius</legend>
                   <input value={temperature} onChange={handleChange} />
+
+                  <BoilingVerdict celcius={parseFloat(temperature)} />
              </fieldset>
         );
     }
