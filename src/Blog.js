@@ -21,16 +21,15 @@ class Blog extends Component {
                         <div key={post.id}>
                             <h3>{post.title}</h3>
                             <p>{post.content}</p>
-                        </div>       
+                        </div> ;     
 
 
-
-    
-        
 
         return (
             <div>
-                
+                {sidebar}
+                    <br/>
+                {content}
             </div>
         );
     }
