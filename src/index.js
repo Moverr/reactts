@@ -9,7 +9,7 @@ import Mailbox from './Mailbox';
 
 
 const isLoggedin = true;
-const unreadMessages =   ['React', 'Re: React', 'Re:Re: React'];
+const unreadMessages =   ['MOver Maflona', 'Rita Nabirye', 'Taking Home and Listen'];
 ReactDOM.render( <Mailbox unreadMessages = {unreadMessages} isLoggedin={isLoggedin}  / > , document.getElementById('root'));
 
 

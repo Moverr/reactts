@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import Messages from './Messages';
 
 class Mailbox extends Component {
 
@@ -15,6 +16,7 @@ class Mailbox extends Component {
             <div>
                 <h1>Hello !</h1>
                 {this.getMst(unreadMessages)}
+                <Messages tmessages={unreadMessages} />
             </div>
         );
     }
