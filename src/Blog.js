@@ -17,21 +17,28 @@ class Blog extends Component {
             </ul>             
         );
 
-        const content =  this.props.posts.map((post)=>
-                        <div key={post.id}>
-                            <h3>{post.title}</h3>
-                            <p>{post.content}</p>
-                        </div> ;     
+        const content =  ( 
+            <div>
+                {
+                    this.props.posts.map((post)=>
+                    <div key={post.id}>
+                    <h2>{post.title}</h2>
+                    <p>{post.content}</p>
+                    
+                        </div>
+                    )
+                }
+            </div>
+        );
 
 
 
         return (
             <div>
-                {sidebar}
-                    <br/>
+                {sidebar} <br/>
                 {content}
             </div>
-        );
+        )
     }
 }
 
