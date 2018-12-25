@@ -16,7 +16,7 @@ class Mailbox extends Component {
             <div>
                 <h1>Hello !</h1>
                 {this.getMst(unreadMessages)}
-                <Messages tmessages={unreadMessages} />
+                <Messages tMessages={unreadMessages} />
             </div>
         );
     }

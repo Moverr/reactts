@@ -6,12 +6,12 @@ import React, { Component } from 'react'
         return null;
       }
       
-      const listitems = this.props.tmessages.map((message)=><li>{message}</li>);
+      const listItems = this.props.tMessages.map((message)=><li>{message}</li>);
 
     return (
       <div>
           <ul>              
-            {listitems}
+            {listItems}
           </ul>
       </div>
     )
