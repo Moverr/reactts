@@ -1,0 +1,10 @@
+import React, { Component } from 'react'
+
+export default class boilingVerdict extends Component {
+  render() {
+    if(this.props.celcius >= 100){
+        return <p>The water would boil. </p>
+    }
+    return <p> The water would not boil. </p>
+  }
+}

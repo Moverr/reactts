@@ -1,18 +1,21 @@
 import React, { Component } from 'react';
 
 class Calculator  extends Component {
-    boilingVerdict(props){
-        if(props.celcius >= 100){
-            return <p>The water would boil. </p>
-        }
-        return <p> The water would not boil. </p>
+
+     
+   
+    handleChange(e){
+        e.preventDefault();
     }
 
     render() {
+
+        const temperature= this.state.temperature;
         return (
-            <div>
-                
-            </div>
+             <fieldset>
+                 <legend>Enter temprature in celcius</legend>
+                  <input value={temperature} onChange={handleChange} />
+             </fieldset>
         );
     }
 }
