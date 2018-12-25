@@ -14,7 +14,6 @@ class Form extends Component {
         // alert("pass me mover");
     }
     handleSubmit(e){
-        // e.preventDefaults();
         e.preventDefault();
         console.log("Let me KNow somethings");
     }
@@ -22,11 +21,11 @@ class Form extends Component {
     render() {
         return (
              <form onSubmit={this.handleSubmit}>
-                 <label> Name : 
-                <input type="text" value={this.state.name}  onChange={this.handleChange} />
-                 </label>
-                 <br/>
-                 <input type="submit" value="Submit" />
+                    <label> Name : 
+                    <input type="text" value={this.state.name}  onChange={this.handleChange} />
+                    </label>
+                    <br/>
+                    <input type="submit" value="Submit" />
              </form>
         );
     }
