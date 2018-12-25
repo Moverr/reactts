@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 
-class DownUp extends Component {
+class Calculator  extends Component {
     boilingVerdict(props){
         if(props.celcius >= 100){
             return <p>The water would boil. </p>
@@ -17,4 +17,4 @@ class DownUp extends Component {
     }
 }
 
-export default DownUp;
+export default Calculator ;
