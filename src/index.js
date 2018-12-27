@@ -7,7 +7,9 @@ import * as serviceWorker from './serviceWorker';
 // import Greeting from './Greeting';
 // import Mailbox from './Mailbox';
 // import Blog from './Blog';
-import Form from './Form';
+// import Form from './Form';
+// import Calculator from './Calculator';
+import WelcomeDialog from './WelcomeDialog';
 
 
 const posts = [
@@ -17,7 +19,7 @@ const posts = [
 
 const isLoggedin = true;
 // const unreadMessages =   ['MOver Maflona', 'Rita Nabirye', 'Taking Home and Listen'];
-ReactDOM.render( <Form posts = {posts} isLoggedin={isLoggedin}  / > , document.getElementById('root'));
+ReactDOM.render( <WelcomeDialog posts = {posts} isLoggedin={isLoggedin}  / > , document.getElementById('root'));
 
 
 
