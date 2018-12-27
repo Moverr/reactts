@@ -21,9 +21,10 @@ class WelcomeDialog extends Component {
         
 
         (result) => {
+            console.log(result);
           this.setState({
             isLoaded: true,
-            items: result.items
+            items: result
           });
         },
         // Note: it's important to handle errors here
@@ -46,7 +47,9 @@ class WelcomeDialog extends Component {
         return (
             <div>
         <FancyBorder color="blue" >
-                {items.values.toString()}
+                {items.title}
+                {items.id}
+                
                 <p className="Dialog-message">
                   Plain
                 </p>
